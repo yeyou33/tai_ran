@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/pro_center.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js">
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				var num = 0;
+				var timer;
+				$('.span1').click(function(event) {
+					num = num + 1
+					if(num > 2) {
+						num = 0
+					}
+					$('.nav1 ul').css('left', -1349 * num + 'px');
+				});
+				$('.span2').click(function(event) {
+					num = num - 1
+					if(num < 0) {
+						num = 2
+					}
+					$('.nav1 ul').css('left', -1349 * num + 'px');
+				});
+				$('.list3 li').hover(function() {
+					$(this).children('#one').stop().fadeOut(500);
+					$(this).children().children('img').stop().fadeTo(500, 1)
+				}, function() {
+					$(this).children('#one').stop().fadeIn(500);
+					$(this).children().children('img').stop().fadeTo(500, 0.6)
+
+				});
+
+				function bb() {
+					clearInterval(timer);
+					timer = setInterval(function() {
+						num = num + 1
+						if(num > 3) {
+							num = 0;
+							$('.nav1 ul').css('left', '0');
+							num = 1;
+						}
+						$('.nav1 ul').animate({
+							left: -1349 * num + 'px'
+						}, 500)
+
+					}, 2000)
+				}
+				bb();
+
+				$('.nav1').hover(function() {
+					clearInterval(timer);
+				}, function() {
+					bb();
+				});
+
+			})
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<nav class="one">
+				<p>
+					设为主页&nbsp;| &nbsp;收藏本页
+				</p>
+			</nav>
+
+			<nav class="two">
+				<img src="images/logo.png" alt="">
+				<form>
+				<input type="text" value="" placeholder="输入你要搜索的内容">
+				<div class="sousuo">
+					<img src="images/suosou.png" />
+				</div>
+				</form>
+			</nav>
+			<nav class="three">
+				<ul class="list1">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="company.html">公司介绍</a>
+					</li>
+					<li>
+						<a href="news.html">新闻中心</a>
+					</li>
+					<li>
+						<a href="product.html">产品中心</a>
+					</li>
+					<li>
+						<a href="contact_us.html">联系我们</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="nav1">
+			<ul>
+				<li><img src="images/nav1.jpg" alt=""></li>
+				<li><img src="images/nav2.jpg" /></li>
+				<li><img src="images/nav3.jpg" /></li>
+				<li><img src="images/nav1.jpg" alt=""></li>
+
+			</ul>
+			<span class="span1">
+				<
+			</span>
+			<span class="span2">
+				>
+			</span>
+		</div>
+		<main>
+			<div id="main1">
+				<img src="images/bg2.jpg" />
+				<ul>
+					<li>
+						<a href="index.html">首页></a>
+					</li>
+					<li>
+						<a href="pro_center.html">产品展示></a>
+					</li>
+					<li>山核桃</li>
+				</ul>
+				<div class="main1_L">
+					<img src="images/pro.jpg" alt="" />
+				</div>
+				<div class="main1_M">
+					<div class="a">品名</div>
+					<div class="a">级别</div>
+					<div class="a">产地</div>
+					<div class="a">价格</div>
+				</div>
+				<div class="main1_R">
+					<div class="b">山核桃</div>
+					<div class="b">A级</div>
+					<div class="b">河南南阳</div>
+					<div class="b">988元/克</div>
+				</div>
+				<h3>南阳毛尖</h3>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;茶油能够给肌肤补充水分，而且有神奇的保湿功效。茶油作为护肤品和护发素已有很多年了。闻名<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;的 美女香妃、杨贵妃以及慈禧太后都视茶油为保持皮肤润滑和美丽的秘诀。
+					<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果您的肌肤比较干燥、缺少活力，或者您想让您的皮肤恢复活力，重现年轻态的健康光泽，那么小编建议您使用纯正的天然茶油。试用一次后，你将会体验到神奇的非凡感受。一天使用几滴就能
+					<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;保持肌肤的湿润，而且茶油能保护皮肤不受紫外线的伤害，预防雀斑、老年斑及抗皱哦。
+				</p>
+			</div>
+
+		</main>
+		<footer>
+			<div class="footer1">
+				<p class="footer2">Copyright @ 2003 - 2016 foods1.com, All Rights Reserved
+				</p>
+				<ul>
+					<li>关于我们-</li>
+					<li>法律声明-</li>
+					<li>广告服务-</li>
+					<li>意见反馈-</li>
+					<li>联系我们-</li>
+					<li>友情链接-</li>
+					<li>网站地图</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+
+</html>

@@ -1,0 +1,245 @@
+	*{
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+		text-decoration: none;
+	}
+	.one{
+		width: 872px;
+		height: 26px;
+		margin: 0px auto;
+	}
+	.two{
+		width: 872px;
+		height: 28px;
+		margin: 0px auto;
+	}
+	.three{
+		width: 812px;
+		height: 38px;
+		margin: 0px auto;
+	}	
+	p,input{
+		margin-top: 10px;
+	}
+	.one p{
+		float: right;
+		font-size: 12px;
+        color: #666;
+        font-family: "微软雅黑";
+	}
+	.two form{
+		width: 178px;
+		height: 68px;
+		display: inline-block;
+		float: right;
+		position: relative;
+	}
+	input{
+		float: right;
+		height: 26px;
+		width: 175px;
+		line-height: 26px;
+		color: #CCCCCC;
+    	outline: none;		
+	}
+	input::-webkit-input-placeholder {
+        color: #aab2bd;
+        font-size: 12px;
+        text-indent: 1em;
+    }
+	.two .sousuo img{
+		width: 25px;
+		margin-top: 1px;
+		margin-left: 3px;
+	}
+	.sousuo{
+		width: 32px;
+		height: 28px;
+		background-color:#999 ;
+		position: absolute;
+		top: 11px;
+		right: 0px;
+	}	
+	.two>img{
+		width: 42px;
+		float: left;
+	}
+    .list1{
+      margin-left: 50px;
+      margin-bottom: 20px;
+
+    }
+    .list1 li{
+    	float: left;
+    	margin: 0px 30px;
+    	font-size: 16px;
+        font-family: "微软雅黑";    	
+    }
+    .list1 li a{
+    	color: #000;
+    }
+    .list1 li:nth-of-type(2) a{
+    	color: red;
+    }
+    .nav1{
+    	width: 1349px;
+    	height: 450px;
+    	overflow: hidden;
+    	position: relative;
+    }
+    .nav1 ul{
+    	width: 5396px;
+    	height: 450px;
+    	position: absolute;
+    	
+    }
+    .nav1 ul li{
+    	width: 1349px;
+    	height: 450px; 
+    	float: left;   	
+    }
+    .nav1 img{
+        width: 100%;
+        height: 450px;
+        display: block; 
+    }
+    .nav1 .span1{
+    	color: #f9f3f3;
+    	font-size: 42px;
+    	line-height: 34px;
+    	width: 41px;
+    	position: absolute;
+    	left: 19%;
+    	top: 51%;
+    	margin-top: -25px;
+    	border-radius: 50%;
+    	height: 42px;
+    	border: none;
+    	background-color: #ece1cd;
+    	cursor: pointer;
+
+        }
+    .nav1 .span2{
+    	color: #f9f3f3;
+    	font-size: 42px;
+    	line-height: 34px;
+    	text-align: center;    	
+    	width: 40px;
+    	position: absolute;
+    	right: 19%;
+    	top: 51%;
+    	margin-top: -25px;
+    	border-radius: 50%;
+    	height: 40px;
+    	background-color: #ece1cd;
+    	cursor: pointer;
+        }   
+    #main1{
+    	width: 100%;
+    	height: 900px;
+    	position: relative;
+    	background: url(../images/bg2.jpg) no-repeat;
+    	background-size: 100%;
+    }
+    /*#main1 img{
+
+    	display: block;
+    }    */
+    #main1 ul{
+    	position: absolute;
+    	left: 483px;
+    	top:0;
+    }
+    #main1 ul li{
+    	float: left;
+    	margin-left: 25px;
+    	margin-top: 30px;    		
+    }
+    #main1 #right{
+    	position: absolute;
+    	right: 851px;
+    	top:30px;  
+    	color: #eee;  	
+    }
+    #main1 #left{
+    	position: absolute;
+    	left: 846px;
+    	top:30px;  
+    	color: #eee;  	
+    	  	
+    }    
+    #main1 ul li{
+    color: #CCCCCC; 
+    cursor: pointer;	
+    }   
+     #main1 .current{
+     	color: #b7314b;
+     }
+    
+    hr{
+    	width: 400px;
+    	margin-top: 10px;
+    	color: #999;
+
+    }
+    .hr1{
+    	float: right;
+    	position: absolute;
+    	right:150px;
+    	top: 110px;
+    }
+    .hr2{
+    	float: left;
+    	position: absolute;
+    	left: 160px;
+    	top: 110px;
+    }
+    h4{
+    	position:absolute;
+    	left: 645px;
+    	top: 110px;
+        font-size: 16px;
+        font-family: '微软雅黑';
+        color: #ccc;
+    } 
+    #main1 ol li{
+    	display: none;
+    }
+    #main1 ol li:nth-of-type(1){
+    	display: block;
+    }
+    #main1 p{
+    	width: 870px;
+    	height: 790px;
+    	position: absolute;
+    	left: 240px;
+    	top: 140px;
+    	color: #CCCCCC;
+    	line-height: 34px;
+    	text-indent: 20px;
+        font-family: '微软雅黑';
+        font-size: 14px;
+    	
+    } 
+    .footer1{
+    	width: 100%;
+    	height: 40px;
+    	background-color:#cccccc; 
+    	/*display: block;*/
+    }
+    .footer2{
+    	width: 450px;
+    	height:20px; 
+        margin: 0px 500px;
+        font-size: 8px;
+    }
+    .footer1 ul{
+    	width: 500px;
+        margin: 0px 485px;    	
+    	font-size: 8px;
+    }
+    .footer1 ul li{
+    	float: left;
+
+    }      

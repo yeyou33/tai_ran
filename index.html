@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>test</title>
+		<link rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+//				轮播
+				var num = 0;
+				var timer;
+				$('.span1').click(function(event) {
+					num = num + 1
+					if(num > 2) {
+						num = 0
+					}
+					$('.nav1 ul').css('left', -1349 * num + 'px');
+				});
+				$('.span2').click(function(event) {
+					num = num - 1
+					if(num < 0) {
+						num = 2
+					}
+					$('.nav1 ul').css('left', -1349 * num + 'px');
+				});
+				
+//				淡入淡出
+				$('.c div').hover(function() {
+					$(this).stop().fadeOut(500).siblings('div').fadeIn(500);
+					$(this).siblings('img').stop().fadeTo(500, 1)
+					
+				}, function() {
+					$(this).stop().fadeIn(2500);
+					$(this).siblings('img').stop().fadeTo(500, 0.7)
+
+				});
+				
+//              定时轮播
+				function bb() {
+					clearInterval(timer);
+					timer = setInterval(function() {
+						num = num + 1
+						if(num > 3) {
+							num = 0;
+							$('.nav1 ul').css('left', '0');
+							num = 1;
+						}
+						$('.nav1 ul').animate({
+							left: -1349 * num + 'px'
+						}, 500)
+
+					}, 2000)
+				}
+				bb();
+
+				$('.nav1').hover(function() {
+					clearInterval(timer);
+				}, function() {
+					bb();
+				});
+
+//				转换
+				$('.c div').click(function(event) {
+					$(this).parent('.c').siblings('.d').children('div').addClass('current').siblings().removeClass('current');
+					var i = $(this).index();
+					    i = i-8;
+//                 alert(i);
+					$('.d div').eq(i).stop().fadeIn(500).siblings().hide()
+				});			
+			})
+		</script>
+
+	</head>
+
+	<body>
+		<header>
+			<nav class="one">
+				<p>
+					设为主页 &nbsp;| &nbsp;收藏本页
+				</p>
+			</nav>
+
+			<nav class="two">
+				<img src="images/logo.png" alt="">
+				<form>
+				<input type="text" value="" placeholder="输入你要搜索的内容">
+				<div class="sousuo">
+					<img src="images/suosou.png" />
+				</div>
+				</form>
+			</nav>
+			<nav class="three">
+				<ul class="list1">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="company.html">公司介绍</a>
+					</li>
+					<li>
+						<a href="news.html">新闻中心</a>
+					</li>
+					<li>
+						<a href="product.html">产品中心</a>
+					</li>
+					<li>
+						<a href="contact_us.html">联系我们</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="nav1">
+			<ul>
+				<li><img src="images/nav1.jpg" alt=""></li>
+				<li><img src="images/nav2.jpg" /></li>
+				<li><img src="images/nav3.jpg" /></li>
+				<li><img src="images/nav1.jpg" alt=""></li>
+
+			</ul>
+			<span class="span1">
+				<
+			</span>
+			<span class="span2">
+				>
+			</span>
+		</div>
+
+		<div class="a">
+			<hr class="hr1">
+
+			<h2>公司简介</h2>
+			<h4>company introduction</h4>
+
+			<hr class="hr2">
+			<p>安徽省旭日人力资源管理有限公司是经安徽省人社厅和工商部门批准注册成立的民营企业，注册资 金为200万元整。集人力供求信息的收集、整理、存储、发布和咨询服务；人才推荐；人才招聘；人力 资源管理、劳务派遣等为一体的专业化人力资源服务公司。为树旭日人才品牌形象，公司特与百度公司 合作，注册公司网站......
+			</p>
+			<p>
+				<a href="company.html">更多详情>></a>
+			</p>
+
+		</div>
+		<div class="b">
+
+			<hr class="hr1">
+			<h2>产品展示</h2>
+			<h4>product display</h4>
+			<hr class="hr2">
+			<ul class="list2">
+				<li>
+					<p id="hong">红杨桃</p>
+					<div class="i img1">
+						<img src="images/img1.jpg" alt="">
+					</div>
+				</li>
+				<li>
+					<p id="shan">山核桃</p>
+					<div class="i img2">
+						<img src="images/img2.jpg" alt="">
+					</div>
+				</li>
+				<li>
+					<p id="you">油茶花</p>
+					<div class="i img3">
+						<img src="images/img3.jpg" alt="">
+				</li>
+				</div>
+
+			</ul>
+		</div>
+		<div class="c">
+			<hr class="hr1">
+			<h2>公司新闻</h2>
+			<h4>company news</h4>
+			<hr class="hr2">
+			<ul class="list3">
+				<li></li>
+			</ul>				
+
+			<img src="images/img4.jpg" alt="" class="m img4">			
+			<img src="images/img5.jpg" alt="" class="m img5">
+			<img src="images/img6.jpg" alt="" class="m img6">
+			
+			<div id="one">
+				<p>灾害预警</p>
+			</div>
+			
+			<div id="two">
+				<p>优美环境</p>
+			</div>					
+
+			<div id="three">
+				<p>积极向上</p>
+			</div>					
+
+			<hr class="hr3" color='#000' ;>
+		</div>
+		<div class="d">			
+				<div class="current">
+		
+					<h4>灾害预警</h4>
+					<p> 这次农村改革座谈会选在安徽小岗村召开，透露出什么信号？陈锡文说，新形势下推进农村改革发展、开创“三农”工作新局面，非常重要的是坚持和完善农村改革的成功实践和经验，这也是这次座谈会为什么选在小岗村召开的深刻涵义。
+					</p>
+					<p>农村改革是否成功是有标准的，一是契合农业和农村特点，二是兼顾国家、集体、农民三者利益，三是真正调动农民积极性，四是能够解放农村的社会生产力。当年在总结提升小岗村的改革经验基础上，逐步形成了我国农业基本经营制度，即以家庭承包经营为基础、统分结合的双层经营体制。这个基本经营制度是整个农村改革所取得的重大制度性成果，是我们党农村政策的.. ...
+					</p>
+					<p>
+						<a href="about_us.html">更多详情>></a>
+					</p>
+		
+				</div>
+				<div>
+		
+					<h4>优美环境</h4>
+					<p> 优美的环境是非常重要的对于一个认真工作的员工，透露出什么信号？陈锡文说，新形势下推进农村改革发展、开创“三农”工作新局面，非常重要的是坚持和完善农村改革的成功实践和经验，这也是这次座谈会为什么选在小岗村召开的深刻涵义。
+					</p>
+					<p>农村改革是否成功是有标准的，一是契合农业和农村特点，二是兼顾国家、集体、农民三者利益，三是真正调动农民积极性，四是能够解放农村的社会生产力。当年在总结提升小岗村的改革经验基础上，逐步形成了我国农业基本经营制度，即以家庭承包经营为基础、统分结合的双层经营体制。这个基本经营制度是整个农村改革所取得的重大制度性成果，是我们党农村政策的.. ...
+					</p>
+					<p>
+						<a href="about_us.html">更多详情>></a>
+					</p>
+		
+				</div>
+				<div>
+		
+					<h4>积极向上</h4>
+					<p> 员工们有积极向上的精神，透露出什么信号？新形势下推进农村改革发展、开创“三农”工作新局面，非常重要的是坚持和完善农村改革的成功实践和经验，这也是这次座谈会为什么选在小岗村召开的深刻涵义。
+					</p>
+					<p>农村改革是否成功是有标准的，一是契合农业和农村特点，二是兼顾国家、集体、农民三者利益，三是真正调动农民积极性，四是能够解放农村的社会生产力。当年在总结提升小岗村的改革经验基础上，逐步形成了我国农业基本经营制度，即以家庭承包经营为基础、统分结合的双层经营体制。这个基本经营制度是整个农村改革所取得的重大制度性成果，是我们党农村政策的.. ...
+					</p>
+					<p>
+						<a href="about_us.html">更多详情>></a>
+					</p>
+		
+				</div>			
+		</div>
+		
+		<div class="e">
+
+			<hr class="hr1">
+			<h2>联系我们</h2>
+			<h4>contact us</h4>
+			<hr class="hr2">
+			<div class="wuxu">
+				<div>
+					<ul>
+						<li>联&nbsp;系&nbsp;人:冯纪福</li>
+						<li>手&nbsp;&nbsp;机:15013670353</li>
+						<li>职&nbsp;&nbsp;位:业务经理</li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li>传&nbsp;&nbsp;真:0086-551-3609611</li>
+						<li>电&nbsp;&nbsp;话:0412-2556-556</li>
+						<li>地&nbsp;&nbsp;址:广东省广州市开元大道191号</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="footer1">
+				<p class="footer2">Copyright @ 2003 - 2016 foods1.com, All Rights Reserved
+				</p>
+				<ul>
+					<li>关于我们-</li>
+					<li>法律声明-</li>
+					<li>广告服务-</li>
+					<li>意见反馈-</li>
+					<li>联系我们-</li>
+					<li>友情链接-</li>
+					<li>网站地图</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+
+</html>
